@@ -7,7 +7,7 @@ title: Log In
 	var username = findGetParameter("username");
 	if (username != null) {
 		createUserCookie(username);
-		window.location.pathname = "/profile";
+		window.location = "/profile";
 	}
 </script>
 

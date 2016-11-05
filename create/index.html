@@ -7,7 +7,7 @@ title: Create Account
 	var username = findGetParameter("username");
 	if (username != null) {
 		createNewUserCookie(username);
-		window.location.pathname = "/profile";
+		window.location = "/profile";
 	}
 </script>
 
