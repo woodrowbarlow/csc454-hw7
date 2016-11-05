@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Safe Stand - {{ page.title }}</title>
+
+        <!-- Bootstrap 3 CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+                integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+                crossorigin="anonymous">
+        <!-- Bootstrap 3 default theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+                integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+                crossorigin="anonymous">
+        <script src="/js/safestand.js"></script>
+        <script type="text/javascript">
+            if (getUsername() == null) {
+                window.location.pathname = "/index.html";
+            }
+        </script>
+    </head>
+    <body>
+    	<p>Attention: This is a non-functional UI prototype for an application which will contain private medical information. Some data is stored temporarily using Javascript cookies and passed insecurely between pages. Do not enter any sensitive data on this website.</p>
+
+        {{ content }}
+
+        <script type="text/javascript">
+            fillUsernames();
+        </script>
+
+        <!-- Bootstrap 3 JS -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+                crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -81,9 +81,3 @@ function fillUSernames() {
         element.innerHTML = username;
     });
 }
-
-var path = window.location.pathname;
-if (path..substring(0,8) === "/profile" && getUsername() == null)
-{
-    window.url.pathname = "/index.html";
-}
