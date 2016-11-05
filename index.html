@@ -3,25 +3,8 @@ layout: default
 title: Log In or Create Account
 ---
 
-<p>Attention: This is a non-functional UI prototype for an application which will contain private medical information. Some data is stored temporarily using Javascript cookies and passed insecurely between pages. Do not enter any sensitive data on this website.</p>
+<p>Welcome. Please <a href="/login">log in</a> or <a href="/create">create an account</a>.</p>
 
-<p>Welcome. Please log in or <a href="/create">create an account</a>.</p>
+{% include login/form.html %}
 
-<form action="/login" method="GET">
-    <label for="username">Username</label>
-    <input type="username" name="username">
-    <label for="password">Password</label>
-    <input type="password" name="password">
-    <input type="submit" value="Log In">
-</form>
-
-<form action="/create" method="GET">
-    <label for="username">Desired Username</label>
-    <input type="username" name="username">
-    <label for="password">Desired Password</label>
-    <input type="password" name="password">
-    <label for="password_confirm">Confirm Password</label>
-    <input type="password" name="password_confirm">
-    <input type="reset" value="Cancel">
-    <input type="submit" value="Create Account">
-</form>
+{% include create/form.html %}

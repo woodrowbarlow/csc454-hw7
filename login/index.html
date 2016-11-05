@@ -3,10 +3,12 @@ layout: default
 title: Log In
 ---
 
-<form action="/login" method="GET">
-    <label for="username">Username</label>
-    <input type="username" name="username">
-    <label for="password">Password</label>
-    <input type="password" name="password">
-    <input type="submit" value="Log In">
-</form>
+<script type="text/javascript">
+	var username = findGetParameter("username");
+	if (username != null) {
+		createUserCookie(username);
+		window.location.pathname = "/profile";
+	}
+</script>
+
+{% include /login/form.html %}
