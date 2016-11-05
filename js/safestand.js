@@ -53,32 +53,32 @@ function deleteCookie(c_name) {
     createCookie(c_name, "", -1);
 }
 
-function createUserCookie(username) {
+createUserCookie = function(username) {
     /* not yet implemented */
     return null;
-}
+};
 
-function createNewUserCookie(username) {
+createNewUserCookie = function(username) {
     createCookie ("username", username, 1);
     createCookie ("survey_required", "1", 1);
     return null;
-}
+};
 
-function getUsername() {
+getUsername = function() {
     var username = getCookie (username);
     if (username === "")
         return null;
     return username;
-}
+};
 
-function isNewUser() {
+isNewUser = function() {
     if (getCookie("survey_required") === "1") {
         return true;
     }
     return false;
-}
+};
 
-function fillUSernames() {
+fillUSernames = function() {
     var username = getUsername();
     if (username == null) {
         return null;
@@ -87,6 +87,6 @@ function fillUSernames() {
     elements.forEach(function(element) {
         element.innerHTML = username;
     });
-}
+};
 
-var username = getUsername();
+username = getUsername();
