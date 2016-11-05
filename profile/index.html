@@ -4,3 +4,13 @@ title: Dashboard
 ---
 
 <h1>Welcome, <span class="username"></span></h1>
+
+<p id="newusermessage" style="display: none">
+	It looks like you're a new user.
+</p>
+
+<script type="text/javascript">
+	if (isNewUser()) {
+		document.getElementById("newusermessage").display = "block";
+	}
+</script>

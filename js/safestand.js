@@ -71,6 +71,13 @@ function getUsername() {
     return username;
 }
 
+function isNewUser() {
+    if (getCookie("survey_required") === "1") {
+        return true;
+    }
+    return false;
+}
+
 function fillUSernames() {
     var username = getUsername();
     if (username == null) {
@@ -81,3 +88,5 @@ function fillUSernames() {
         element.innerHTML = username;
     });
 }
+
+var username = getUsername();
